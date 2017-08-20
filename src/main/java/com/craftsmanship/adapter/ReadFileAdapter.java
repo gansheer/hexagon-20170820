@@ -11,6 +11,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.inject.Inject;
+
 import com.craftsmanship.domain.Dvd;
 import com.craftsmanship.domain.IRepositoryDvd;
 
@@ -22,7 +24,12 @@ import com.craftsmanship.domain.IRepositoryDvd;
  */
 public class ReadFileAdapter implements IRepositoryDvd {
 
+	@Inject
 	private Path path;
+	
+	public ReadFileAdapter() {
+		super();
+	}
 
 	public ReadFileAdapter(Path path) {
 		super();
